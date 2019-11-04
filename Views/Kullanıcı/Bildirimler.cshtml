@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Notifications";
+}
+@using Mvc_Otelim.Models;
+@model List<Bildirim>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="block">
+            <div class="block-heading">
+                <div class="main-text h2">
+
+                     <p> Notifications </p>
+                    
+
+                </div>
+                <div class="block-controls">
+                    <a href="/Home/Index">   <span aria-hidden="true" class="icon icon-cross icon-size-medium block-control-remove"></span> </a>
+                    <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+
+                </div>
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Bildirim</th>
+                                <th>Tarih</th>
+                                <th>Sil</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{foreach (Bildirim b in Model)
+                                {
+
+
+                                             <tr>
+                                                 <td>@b.text</td>          
+                                                 <td>@Convert.ToString(b.tarih)</td>      
+                                                 <td><button class="btn btn-danger bsil" data-bid="@b.ID" >Sil</button></td>
+                                             </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+
+    <script>
+        $(".bsil").click(function () {
+
+            var rID = $(this).data("bid");
+           
+               $.ajax({
+                    type: "POST",
+                    url: "/Kullanıcı/BildirimSil/",
+                    data: { id: rID },
+                    success: function () {
+                        alert("Bildirim silindi!");
+                        window.location.replace("/Kullanıcı/Bildirimler/");
+                    }
+
+                });
+            
+        });
+    </script>
+
+}

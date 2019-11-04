@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OTEL_DBModelStoreContainer" CdmEntityContainer="OtelModel1">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="OTEL_DBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Şifre" ColumnName="Şifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bildirim">
+      <EntityTypeMapping TypeName="OTEL_DBModel.Bildirim">
+        <MappingFragment StoreEntitySet="Bildirim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FavoriOtel">
+      <EntityTypeMapping TypeName="OTEL_DBModel.FavoriOtel">
+        <MappingFragment StoreEntitySet="FavoriOtel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanıcı">
+      <EntityTypeMapping TypeName="OTEL_DBModel.Kullanıcı">
+        <MappingFragment StoreEntitySet="Kullanıcı">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="DoğumTarihi" ColumnName="DoğumTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oda">
+      <EntityTypeMapping TypeName="OTEL_DBModel.Oda">
+        <MappingFragment StoreEntitySet="Oda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OdaTürü" ColumnName="OdaTürü" />
+          <ScalarProperty Name="Kapasite" ColumnName="Kapasite" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OdaFoto">
+      <EntityTypeMapping TypeName="OTEL_DBModel.OdaFoto">
+        <MappingFragment StoreEntitySet="OdaFoto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OdaID" ColumnName="OdaID" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OdaYorum">
+      <EntityTypeMapping TypeName="OTEL_DBModel.OdaYorum">
+        <MappingFragment StoreEntitySet="OdaYorum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="OdaID" ColumnName="OdaID" />
+          <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Otel">
+      <EntityTypeMapping TypeName="OTEL_DBModel.Otel">
+        <MappingFragment StoreEntitySet="Otel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OtelAdı" ColumnName="OtelAdı" />
+          <ScalarProperty Name="OtelTürüID" ColumnName="OtelTürüID" />
+          <ScalarProperty Name="OdaSayısı" ColumnName="OdaSayısı" />
+          <ScalarProperty Name="YıldızSayısı" ColumnName="YıldızSayısı" />
+          <ScalarProperty Name="Puan" ColumnName="Puan" />
+          <ScalarProperty Name="YöneticiID" ColumnName="YöneticiID" />
+          <ScalarProperty Name="Şehir" ColumnName="Şehir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtelFoto">
+      <EntityTypeMapping TypeName="OTEL_DBModel.OtelFoto">
+        <MappingFragment StoreEntitySet="OtelFoto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtelPuanlandırma">
+      <EntityTypeMapping TypeName="OTEL_DBModel.OtelPuanlandırma">
+        <MappingFragment StoreEntitySet="OtelPuanlandırma">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+          <ScalarProperty Name="Puan" ColumnName="Puan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtelYorum">
+      <EntityTypeMapping TypeName="OTEL_DBModel.OtelYorum">
+        <MappingFragment StoreEntitySet="OtelYorum">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+          <ScalarProperty Name="Yorum" ColumnName="Yorum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtelYöneticisi">
+      <EntityTypeMapping TypeName="OTEL_DBModel.OtelYöneticisi">
+        <MappingFragment StoreEntitySet="OtelYöneticisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+          <ScalarProperty Name="Şifre" ColumnName="Şifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rezervasyon">
+      <EntityTypeMapping TypeName="OTEL_DBModel.Rezervasyon">
+        <MappingFragment StoreEntitySet="Rezervasyon">
+          <ScalarProperty Name="rezID" ColumnName="rezID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="OdaID" ColumnName="OdaID" />
+          <ScalarProperty Name="GirişTarih" ColumnName="GirişTarih" />
+          <ScalarProperty Name="ÇıkışTarih" ColumnName="ÇıkışTarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SonGörüntülenen">
+      <EntityTypeMapping TypeName="OTEL_DBModel.SonGörüntülenen">
+        <MappingFragment StoreEntitySet="SonGörüntülenen">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullanıcıID" ColumnName="KullanıcıID" />
+          <ScalarProperty Name="OtelID" ColumnName="OtelID" />
+          <ScalarProperty Name="GörüntülenmeTarihi" ColumnName="GörüntülenmeTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

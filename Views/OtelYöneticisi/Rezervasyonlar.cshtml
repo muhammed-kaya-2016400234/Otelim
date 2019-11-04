@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Reservations";
+   
+}
+@using Mvc_Otelim.Models;
+@model RezervasyonViewModel
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="block">
+            <div class="block-heading">
+                <div class="main-text h2">
+
+                     <p> Reservations </p>
+                    
+
+                </div>
+                <div class="block-controls">
+                    <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+
+                </div>
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+                     <div id="order-view-content" class="table-responsive">
+                        <ul id="order-view-tabs" class="nav nav-tabs tabs-below">
+                            <li class="active"><a href="#order-view-tabs-order-details" data-toggle="tab">Future</a></li>
+                            <li><a href="#order-view-tabs-payment" data-toggle="tab">Past</a></li>
+                           
+                        </ul>
+                        <div class="tab-content">
+                            <div id="order-view-tabs-order-details" class="tab-pane active">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Rezervasyon ID</th>
+                                            <th>Oda ID</th>
+                                            <th>Giriş Tarihi</th>
+                                            <th>Çıkış Tarihi</th>
+                                            <th>Kullanıcı ID</th>
+                                            <th>İptal</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{foreach (Rezervasyon k in Model.future)
+                                            {
+
+
+                                               <tr>
+                                                            <td>@k.rezID</td>
+                                                            <td>@k.OdaID</td>
+                                                            <td>@Convert.ToDateTime(k.GirişTarih).ToString("dd/MM/yyyy")</td>
+                                                            <td>@Convert.ToDateTime(k.ÇıkışTarih).ToString("dd/MM/yyyy")</td>
+                                                            <td>@k.KullanıcıID</td>
+                                                          
+                                                            <td><button class="btn btn-danger rezsil" data-rezid="@Convert.ToInt32(k.rezID)" data-kid="@k.KullanıcıID">İptal Et</button></td>
+                                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="tab-pane" id="order-view-tabs-payment">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Rezervasyon ID</th>
+                                            <th>Oda ID</th>
+                                            <th>Giriş Tarihi</th>
+                                            <th>Çıkış Tarihi</th>
+                                            <th>Kullanıcı ID</th>
+                                            
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @{foreach (Rezervasyon k in Model.past)
+                                            {
+
+
+                                               <tr>
+                                                            <td>@k.rezID</td>
+                                                            <td>@k.OdaID</td>
+                                                            <td>@Convert.ToDateTime(k.GirişTarih).ToString("dd/MM/yyyy")</td>
+                                                            <td>@Convert.ToDateTime(k.ÇıkışTarih).ToString("dd/MM/yyyy")</td>
+                                                            <td>@k.KullanıcıID</td>
+                                                          
+                                                              </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                          
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+<script>
+    $(".rezsil").click(function () {
+        
+            var rID = $(this).data("rezid");
+            var check = confirm(rID + " no'lu rezervasyon iptal edilsin/silinsin mi?")
+            var kid = $(this).data("kid");
+            if (check == true) {
+               
+                $.ajax({
+                    type: "POST",
+                    url: "/Kullanıcı/RezervasyonSil/",
+                    data:{id:rID,kid:kid},
+                    success: function () {
+                        alert("Rezervasyon iptal edildi!");
+                        window.location.replace("/OtelYöneticisi/Rezervasyonlar/");
+                    }
+                    
+                });
+            }
+        });
+    </script>
+   
+
+}

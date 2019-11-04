@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Manage Hotels";
+
+}
+@using Mvc_Otelim.Models;
+@model List<Otel>
+<div class="row">
+    <div class="col-md-12">
+        <div class="block">
+            <div class="block-heading">
+                <div class="main-text h2">
+
+                    <h1> Manage Hotels </h1>
+                    <h5><a href="/Admin/OtelEkleForm" class="btn btn-info bg-color-green">Add New Hotel</a></h5>
+
+
+                </div>
+                <div class="block-controls">
+                    <a href="/Admin/Index">   <span aria-hidden="true" class="icon icon-cross icon-size-medium block-control-remove"></span> </a>
+                    <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+
+                </div>
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Otel ID</th>
+                                <th>Otel Adı</th>
+                                <th>Yönetici ID</th>
+                                <th>Şehir</th>
+                                <th>Güncelle</th>
+                                <th>Sil</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{foreach (Otel k in Model)
+                                {
+
+
+                                    <tr>
+                                        <td>@k.ID</td>
+                                        <td>@k.OtelAdı</td>
+                                        <td>@k.YöneticiID</td>
+                                        <td>@k.Şehir</td>
+                                        <td><a class="btn btn-info bg-color-yellow" href="@Url.Action("OtelGüncelleForm","Admin",new {otelID=k.ID })">Güncelle</a></td>
+                                        <td><a class="btn btn-danger otelSil" data-otelid="@k.ID" data-name="@k.OtelAdı" data-city="@k.Şehir">Sil</a></td>
+
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        $(".otelSil").click(function () {
+            
+            var rID = $(this).data("otelid");
+            var name = $(this).data("name");
+            var city = $(this).data("city");
+
+            var check = confirm(rID + " no'lu otel("+name+" - "+city+") silinsin mi?")
+
+            if (check == true) {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Admin/OtelSil/",
+                    data: { id: rID },
+                    success: function (durum) {
+                        if (durum == 1) {
+                            alert("Hotel was deleted!");
+                            window.location.replace("/Admin/OtelleriGörüntüle/");
+                        } else {
+
+                            alert("Error! Hotel was not deleted.")
+                        }
+                    }
+
+                });
+            }
+        });
+
+
+    </script>
+
+}

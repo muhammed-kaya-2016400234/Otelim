@@ -1,0 +1,180 @@
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.pdb
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\Microsoft.Web.Infrastructure.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.xml
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.dll
+c:\users\casper_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.pdb
+C:\Users\CASPER_18\documents\visual studio 2012\Projects\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll.config
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.pdb
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CopyComplete
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.dll
+C:\Users\ASUS\Desktop\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.pdb
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll.config
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.pdb
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CopyComplete
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.dll
+C:\Users\ASUS\Desktop\deneme\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.pdb
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csprojResolveAssemblyReference.cache
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.pdb
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.pdb
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.dll
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.xml
+C:\Users\CASPER_18\Desktop\otelim mvc\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll.config
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.pdb
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CopyComplete
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.dll
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.pdb
+C:\Users\ASUS\Desktop\staj uyumsoft\uyumsoft\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csprojAssemblyReference.cache
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll.config
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\Mvc_Otelim.pdb
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\Microsoft.Web.Infrastructure.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\EntityFramework.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\Newtonsoft.Json.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Net.Http.Formatting.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Helpers.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Http.WebHost.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Mvc.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.Razor.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Deployment.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\bin\System.Web.WebPages.Razor.xml
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csprojAssemblyReference.cache
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CoreCompileInputs.cache
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.csproj.CopyComplete
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.dll
+D:\BERA belgeler\staj uyumsoft\OTELİM\Mvc_Otelim\Mvc_Otelim\obj\Debug\Mvc_Otelim.pdb

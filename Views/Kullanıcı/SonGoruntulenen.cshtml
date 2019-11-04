@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Son Görüntülenen Oteller";
+    
+}
+
+@using Mvc_Otelim.Models;
+@using System.Data;
+<div class="row">
+    <div class="col-md-12">
+        <div class="block">
+            <div class="block-heading">
+                   <h1>Son Görüntülediğiniz Oteller</h1>
+               <div class="block-controls">
+                    <a href="/Home/Index">   <span aria-hidden="true" class="icon icon-cross icon-size-medium block-control-remove"></span> </a>
+                      <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+                    
+                </div>
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Otel Adı</th>
+                                <th>Oda Sayısı</th>
+                                <th>Yıldız Sayısı</th>
+                                <th>Puan</th>
+                                <th>Şehir</th>
+                                <th>ID</th>
+                                <th>Görüntülenme Tarihi</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (DataRow k in Model.Tables[0].Rows)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="/Otel/TumOdalar/@k["ID"]" type="button" class="btn btn-info "  >@k["OtelAdı"] </a>
+
+                                    </td>
+                                    <td>@k["OdaSayısı"]</td>
+                                    <td>@k["YıldızSayısı"]</td>
+                                    <td>@k["Puan"]</td>
+                                    <td>@k["Şehir"]</td>
+                                    <td>@k["ID"]</td>
+                                    <td>@k["gr"]</td>
+                                  
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<script>
+    $(".detay").click(function () {
+        var id = $(this).data("id");
+
+        //alert("Tamam'a basıldı");
+        $.ajax({
+            type: "POST",
+            url: "/Otel/Görüntüle/" + id,
+            success: 
+                window.location.replace("/Otel/Görüntüle")
+
+        });
+    });
+    </script>

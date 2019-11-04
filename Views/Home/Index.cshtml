@@ -1,0 +1,422 @@
+﻿
+@{
+    ViewBag.Title = "Ana Sayfa";
+
+}
+@using Mvc_Otelim.Models;
+
+<div class="row">
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <div class="block">
+            @{
+
+                if (Session["name"] != null)
+                {
+
+                    <h1 style="color:crimson">Hoşgeldin @Session["name"]</h1>
+                    <!--
+                     Böyle kullanırsak url'de id değiştirilip başkasının bililerine ulaşılabilir.
+                    <a href="../Kullanıcı/SonGoruntulenen/Session["id"]" class="btn btn-default bg-color-yellow btn-xs ">Son Görüntülenenler</a><br />
+
+                          <a href="../Kullanıcı/SonGoruntulenen/" class="btn btn-default bg-color-yellow btn-xs ">Last Visited</a><br />
+                          <a href="../Kullanıcı/Rezervasyonlar/" class="btn btn-default bg-color-yellow btn-xs ">My Reservations</a><br />
+                          <a href="../Kullanıcı/Favoriler/" class="btn btn-default bg-color-yellow btn-xs ">My Favourites</a><br />
+
+                          <a href="../Login/Logout" class="btn btn-default bg-color-red btn-xs">Çıkış Yap</a>
+                              -->
+                }
+
+
+            }
+        </div>
+
+        <!--
+        <div class="col-md-12">
+                                     <div class="block">
+                                         <div class="block-heading">
+                                             <div class="main-text h2">
+                                                 Date/Time Picker
+                                             </div>
+                                             <div class="block-controls">
+                                                 <span aria-hidden="true" class="icon icon-cross icon-size-medium block-control-remove"></span>
+                                                 <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+                                             </div>
+                                         </div>
+                                         <div class="block-content-outer" style="display: block;">
+                                             <div class="block-content-inner">
+                                                 <form id="registrationForm-1" method="post">
+                                                     <div class="row">
+                                                         <div class="col-md-6">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">Basic</label>
+                                                                 <div class="input-group" id="datetimepicker1">
+                                                                     <input type="text" class="form-control" autocomplete="off">
+                                                                     <span class="input-group-addon input-group-icon">
+                                                                         <span class="glyphicon-calendar glyphicon"></span>
+                                                                     </span>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                         <div class="col-md-6">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">Time Only</label>
+                                                                 <div class="input-group" id="datetimepicker2">
+                                                                     <input type="text" class="form-control" autocomplete="off">
+                                                                     <span class="input-group-addon input-group-icon">
+                                                                         <span class="glyphicon glyphicon-clock glyphicon-time"></span>
+                                                                     </span>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                     <div class="row">
+                                                         <div class="col-md-6">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">Date Only</label>
+                                                                 <div class="input-group" id="datetimepicker3">
+                                                                     <input type="text" class="form-control" autocomplete="off">
+                                                                     <span class="input-group-addon input-group-icon">
+                                                                         <span class="glyphicon-calendar glyphicon"></span>
+                                                                     </span>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                         <div class="col-md-6">
+                                                             <div class="form-group">
+                                                                 <label class="control-label">No Icon</label>
+                                                                 <input type="text" class="form-control" autocomplete="off" id="datetimepicker4">
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                     <div class="row">
+                                                         <div class="col-md-6">
+                                                             <div class="form-group">
+                                                                 <label>Event Start and... </label>
+                                                                 <div class="input-group" id="datetimepicker5">
+                                                                     <input type="text" class="form-control" autocomplete="off">
+                                                                     <span class="input-group-addon input-group-icon">
+                                                                         <span class="glyphicon-calendar glyphicon"></span>
+                                                                     </span>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                         <div class="col-md-6">
+                                                             <div class="form-group">
+                                                                 <label>...End Date</label>
+                                                                 <div class="input-group" id="datetimepicker6">
+                                                                     <input type="text" class="form-control" autocomplete="off">
+                                                                     <span class="input-group-addon input-group-icon">
+                                                                         <span class="glyphicon-calendar glyphicon"></span>
+                                                                     </span>
+                                                                 </div>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </form>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+         -->
+
+        <div class="block">
+            <div class="block-heading">
+                <div class="main-text h2">
+                    Otel Ara
+                </div>
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+                    <form role="form" id="registrationForm-1" action="/Search/Arama" method="get">
+                        <div class="form-group">
+
+                            <label for="qwe">
+                                Şuna Göre Ara:
+                            </label>
+                            <div id="qwe" class="form-group">
+                                <input type="radio" name="arama" value="şehir" checked="checked" />Şehir
+                                <input type="radio" name="arama" value="otel" />Otel Adı <br />
+                            </div>
+                            <!--
+    <div class="autocomplete" style="width:300px;position:relative">
+        <input id="myInput" type="text" name="myCountry" placeholder="Country">
+    </div>
+        -->
+
+
+                            <input type="text" name="şehir" class="form-control " data-bv-field="name" id="inp1" placeholder="Şehir/Otel Adı Giriniz">
+                            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">The room name is required and cannot be empty</small>
+
+                            <label for="inp3">
+                                Kişi Sayısı
+                            </label>
+                            <input type="number" min="1" value="1" name="KişiSayısı" class="form-control " id="inp3" placeholder="Kişi Sayısı  Giriniz">
+                            <label for="inp4">
+                                Giriş Tarihi
+                            </label>
+                            <input autocomplete="off" type="text" name="giriş" class="form-control tarih" id="from" placeholder="Giriş Tarihi Giriniz">
+                            <label for="inp5">
+                                Çıkış Tarihi
+                            </label>
+                            <input autocomplete="off" type="text" name="çıkış" class="form-control tarih" id="to" placeholder="Çıkış Tarihi Giriniz">
+                            @if (Session["fail"] != null)
+                            {
+                                <p style="color:red">Tarih hatalı!</p>
+                            }
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Ara</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+
+
+
+        $(".tarih").each(function () {
+            $(this).datepicker(
+                {
+                    minDate: 0,
+                    dateFormat: 'dd-mm-yy'
+                }
+            );
+        });
+
+        
+
+       /* 
+           $("#toDate").datepicker(
+            {
+                minDate: 0,
+                dateFormat:'dd-mm-yy'
+            }
+        );
+
+    */
+       /* $("#fromDate").datepicker({
+            minDate: 0,
+            dateFormat: 'dd-mm-yy',
+            onSelect: function (date) {
+               // var elem = date.split("-");
+               // alert($("#toDate").datepicker("option","minDate"));
+                //$("#toDate").datepicker("option", "minDate", "+5d");
+                alert("here");
+                var a = document.getElementById("toDate");
+                alert(a.datepicker("option","minDate"));
+                     
+
+            }
+        });
+
+        $("#toDate").datepicker({minDate:0});
+        */
+       /* $(function () {
+            var bDates = [{ start: new Date(2019, 01, 06), end: new Date(2019, 01, 17) },
+            { start: new Date(2019, 02, 05), end: new Date(2019, 02, 07) },
+            { start: new Date(2019, 03, 07), end: new Date(2019, 03, 10) }];
+            var dateFormat = 'yyyy mm dd';
+            from = $("#from").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3,
+                minDate: 0,
+                beforeShowDay: function (date) {
+                    for (var i = 0; i < bDates.length; i++) {
+                        if (date >= bDates[i].start && date <= bDates[i].end) return [false, ''];
+                    }
+                    return [true, ''];
+                }
+            }).on("change", function () {
+                to.datepicker("option", "minDate", getDate(this));
+            });
+            to = $("#to").datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 3
+            }).on("change", function () {
+                from.datepicker("option", "maxDate", getDate(this));
+            });
+
+        }
+     );
+           */ 
+            
+            
+
+        /*
+            beforeShowDay: function (date) {
+                var a = new Date('2019', '07', '30');
+                
+                if (date.getDate() == a.getDate() && date.getMonth() == a.getMonth() && date.getFullYear()== a.getFullYear()) {
+                    return [false];
+                } else {
+                    return [true];
+
+                }
+
+            }
+            */
+
+        
+
+      
+
+
+    </script>
+
+    <script type="text/javascript" src="../Content/assets/js/required/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/jquery-ui-1.11.0.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/jquery.easing.1.3-min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/misc/jquery.mousewheel-3.0.6.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/misc/retina.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/icheck.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/misc/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/required/circloid-functions.js"></script>
+
+    <!-- Optional JS Files -->
+    <script type="text/javascript" src="../Content/assets/js/optional/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/switchery.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/powerange.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/jquery.bootstrap-touchspin.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/bootstrap-tagsinput.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/misc/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/misc/moment.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/bootstrap-multiselect.min.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/optional/ckeditor/adapters/jquery.js"></script> <!-- This jQuery Adapter is REQUIRED for CKEditor to function properly -->
+    <!-- add optional JS plugin files here -->
+    <!-- REQUIRED: User Editable JS Files -->
+    <script type="text/javascript" src="../Content/assets/js/script.js"></script>
+    <!-- add additional User Editable files here -->
+    <!-- Demo JS Files -->
+    <script type="text/javascript" src="../Content/assets/js/demo-files/form-extras.js"></script>
+    <script type="text/javascript" src="../Content/assets/js/demo-files/pages-signin-1.js"></script>
+
+
+
+    <script>
+
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+
+
+    </script>
+
+    <script>
+       
+
+       // var elem = ["qwe", "wer", "qas"];
+        
+       // autocomplete(document.getElementById("myInput"),elem);
+    </script>
+
+}
+
+

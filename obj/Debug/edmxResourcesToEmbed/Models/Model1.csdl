@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OTEL_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Şifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Bildirim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="tarih" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.FK__Bildirim__Kullan__2B3F6F97" FromRole="Bildirim" ToRole="Kullanıcı" />
+  </EntityType>
+  <EntityType Name="FavoriOtel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.FK__FavoriOte__Kulla__2C3393D0" FromRole="FavoriOtel" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__FavoriOte__OtelI__2D27B809" FromRole="FavoriOtel" ToRole="Otel" />
+    <NavigationProperty Name="Kullanıcı1" Relationship="Self.kullanıcı_favoriotel" FromRole="FavoriOtel" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Otel1" Relationship="Self.otel_favoriotel" FromRole="FavoriOtel" ToRole="Otel" />
+  </EntityType>
+  <EntityType Name="Kullanıcı">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DoğumTarihi" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Bildirim" Relationship="Self.FK__Bildirim__Kullan__2B3F6F97" FromRole="Kullanıcı" ToRole="Bildirim" />
+    <NavigationProperty Name="FavoriOtel" Relationship="Self.FK__FavoriOte__Kulla__2C3393D0" FromRole="Kullanıcı" ToRole="FavoriOtel" />
+    <NavigationProperty Name="FavoriOtel1" Relationship="Self.kullanıcı_favoriotel" FromRole="Kullanıcı" ToRole="FavoriOtel" />
+    <NavigationProperty Name="OtelPuanlandırma" Relationship="Self.FK__OtelPuanl__Kulla__38996AB5" FromRole="Kullanıcı" ToRole="OtelPuanlandırma" />
+    <NavigationProperty Name="Rezervasyon" Relationship="Self.FK__Rezervasy__Kulla__412EB0B6" FromRole="Kullanıcı" ToRole="Rezervasyon" />
+    <NavigationProperty Name="SonGörüntülenen" Relationship="Self.FK__SonGörünt__Kulla__44FF419A" FromRole="Kullanıcı" ToRole="SonGörüntülenen" />
+    <NavigationProperty Name="OdaYorum" Relationship="Self.kullanıcı_OdaYorum" FromRole="Kullanıcı" ToRole="OdaYorum" />
+    <NavigationProperty Name="OtelPuanlandırma1" Relationship="Self.kullanıcı_OtelPuanlandırma" FromRole="Kullanıcı" ToRole="OtelPuanlandırma" />
+    <NavigationProperty Name="OtelYorum" Relationship="Self.kullanıcı_OtelYorum" FromRole="Kullanıcı" ToRole="OtelYorum" />
+    <NavigationProperty Name="Rezervasyon1" Relationship="Self.kullanıcı_rezervasyon" FromRole="Kullanıcı" ToRole="Rezervasyon" />
+    <NavigationProperty Name="SonGörüntülenen1" Relationship="Self.kullanıcı_songörüntülenen" FromRole="Kullanıcı" ToRole="SonGörüntülenen" />
+  </EntityType>
+  <EntityType Name="Oda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OdaTürü" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Kapasite" Type="Int32" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__Oda__OtelID__300424B4" FromRole="Oda" ToRole="Otel" />
+    <NavigationProperty Name="OdaFoto" Relationship="Self.FK__OdaFoto__OdaID__31EC6D26" FromRole="Oda" ToRole="OdaFoto" />
+    <NavigationProperty Name="OdaYorum" Relationship="Self.FK__OdaYorum__OdaID__33D4B598" FromRole="Oda" ToRole="OdaYorum" />
+    <NavigationProperty Name="Rezervasyon" Relationship="Self.FK__Rezervasy__OdaID__4222D4EF" FromRole="Oda" ToRole="Rezervasyon" />
+    <NavigationProperty Name="OdaFoto1" Relationship="Self.Oda_OdaFoto" FromRole="Oda" ToRole="OdaFoto" />
+    <NavigationProperty Name="OdaYorum1" Relationship="Self.Oda_OdaYorum" FromRole="Oda" ToRole="OdaYorum" />
+    <NavigationProperty Name="Otel1" Relationship="Self.Oda_Otel" FromRole="Oda" ToRole="Otel" />
+    <NavigationProperty Name="Rezervasyon1" Relationship="Self.Oda_rezervasyon" FromRole="Oda" ToRole="Rezervasyon" />
+  </EntityType>
+  <EntityType Name="OdaFoto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OdaID" Type="Int32" />
+    <Property Name="Link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Oda" Relationship="Self.FK__OdaFoto__OdaID__31EC6D26" FromRole="OdaFoto" ToRole="Oda" />
+    <NavigationProperty Name="Oda1" Relationship="Self.Oda_OdaFoto" FromRole="OdaFoto" ToRole="Oda" />
+  </EntityType>
+  <EntityType Name="OdaYorum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="OdaID" Type="Int32" Nullable="false" />
+    <Property Name="Yorum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.kullanıcı_OdaYorum" FromRole="OdaYorum" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Oda" Relationship="Self.FK__OdaYorum__OdaID__33D4B598" FromRole="OdaYorum" ToRole="Oda" />
+    <NavigationProperty Name="Oda1" Relationship="Self.Oda_OdaYorum" FromRole="OdaYorum" ToRole="Oda" />
+  </EntityType>
+  <EntityType Name="Otel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OtelAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OtelTürüID" Type="Int32" />
+    <Property Name="OdaSayısı" Type="Int32" />
+    <Property Name="YıldızSayısı" Type="Int32" />
+    <Property Name="Puan" Type="Single" />
+    <Property Name="YöneticiID" Type="Int32" />
+    <Property Name="Şehir" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FavoriOtel" Relationship="Self.FK__FavoriOte__OtelI__2D27B809" FromRole="Otel" ToRole="FavoriOtel" />
+    <NavigationProperty Name="FavoriOtel1" Relationship="Self.otel_favoriotel" FromRole="Otel" ToRole="FavoriOtel" />
+    <NavigationProperty Name="Oda" Relationship="Self.FK__Oda__OtelID__300424B4" FromRole="Otel" ToRole="Oda" />
+    <NavigationProperty Name="Oda1" Relationship="Self.Oda_Otel" FromRole="Otel" ToRole="Oda" />
+    <NavigationProperty Name="OtelFoto" Relationship="Self.FK__OtelFoto__OtelID__36B12243" FromRole="Otel" ToRole="OtelFoto" />
+    <NavigationProperty Name="OtelPuanlandırma" Relationship="Self.FK__OtelPuanl__OtelI__398D8EEE" FromRole="Otel" ToRole="OtelPuanlandırma" />
+    <NavigationProperty Name="OtelYorum" Relationship="Self.FK__OtelYorum__OtelI__3C69FB99" FromRole="Otel" ToRole="OtelYorum" />
+    <NavigationProperty Name="OtelYöneticisi" Relationship="Self.FK__OtelYönet__OtelI__3F466844" FromRole="Otel" ToRole="OtelYöneticisi" />
+    <NavigationProperty Name="SonGörüntülenen" Relationship="Self.FK__SonGörünt__OtelI__45F365D3" FromRole="Otel" ToRole="SonGörüntülenen" />
+    <NavigationProperty Name="OtelFoto1" Relationship="Self.Otel_OtelFoto" FromRole="Otel" ToRole="OtelFoto" />
+    <NavigationProperty Name="OtelPuanlandırma1" Relationship="Self.otel_OtelPuanlandırma" FromRole="Otel" ToRole="OtelPuanlandırma" />
+    <NavigationProperty Name="OtelYorum1" Relationship="Self.otel_OtelYorum" FromRole="Otel" ToRole="OtelYorum" />
+    <NavigationProperty Name="OtelYöneticisi1" Relationship="Self.Otel_OtelYöneticisi" FromRole="Otel" ToRole="OtelYöneticisi" />
+    <NavigationProperty Name="SonGörüntülenen1" Relationship="Self.otel_songörüntülenen" FromRole="Otel" ToRole="SonGörüntülenen" />
+  </EntityType>
+  <EntityType Name="OtelFoto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__OtelFoto__OtelID__36B12243" FromRole="OtelFoto" ToRole="Otel" />
+    <NavigationProperty Name="Otel1" Relationship="Self.Otel_OtelFoto" FromRole="OtelFoto" ToRole="Otel" />
+  </EntityType>
+  <EntityType Name="OtelPuanlandırma">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <Property Name="Puan" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.FK__OtelPuanl__Kulla__38996AB5" FromRole="OtelPuanlandırma" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Kullanıcı1" Relationship="Self.kullanıcı_OtelPuanlandırma" FromRole="OtelPuanlandırma" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__OtelPuanl__OtelI__398D8EEE" FromRole="OtelPuanlandırma" ToRole="Otel" />
+    <NavigationProperty Name="Otel1" Relationship="Self.otel_OtelPuanlandırma" FromRole="OtelPuanlandırma" ToRole="Otel" />
+  </EntityType>
+  <EntityType Name="OtelYorum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <Property Name="Yorum" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.kullanıcı_OtelYorum" FromRole="OtelYorum" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__OtelYorum__OtelI__3C69FB99" FromRole="OtelYorum" ToRole="Otel" />
+    <NavigationProperty Name="Otel1" Relationship="Self.otel_OtelYorum" FromRole="OtelYorum" ToRole="Otel" />
+  </EntityType>
+  <EntityType Name="OtelYöneticisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Soyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <Property Name="Şifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__OtelYönet__OtelI__3F466844" FromRole="OtelYöneticisi" ToRole="Otel" />
+    <NavigationProperty Name="Otel1" Relationship="Self.Otel_OtelYöneticisi" FromRole="OtelYöneticisi" ToRole="Otel" />
+  </EntityType>
+  <EntityType Name="Rezervasyon">
+    <Key>
+      <PropertyRef Name="rezID" />
+    </Key>
+    <Property Name="rezID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="OdaID" Type="Int32" Nullable="false" />
+    <Property Name="GirişTarih" Type="DateTime" Precision="0" />
+    <Property Name="ÇıkışTarih" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.FK__Rezervasy__Kulla__412EB0B6" FromRole="Rezervasyon" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Kullanıcı1" Relationship="Self.kullanıcı_rezervasyon" FromRole="Rezervasyon" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Oda" Relationship="Self.FK__Rezervasy__OdaID__4222D4EF" FromRole="Rezervasyon" ToRole="Oda" />
+    <NavigationProperty Name="Oda1" Relationship="Self.Oda_rezervasyon" FromRole="Rezervasyon" ToRole="Oda" />
+  </EntityType>
+  <EntityType Name="SonGörüntülenen">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="OtelID" Type="Int32" Nullable="false" />
+    <Property Name="GörüntülenmeTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Kullanıcı" Relationship="Self.FK__SonGörünt__Kulla__44FF419A" FromRole="SonGörüntülenen" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Kullanıcı1" Relationship="Self.kullanıcı_songörüntülenen" FromRole="SonGörüntülenen" ToRole="Kullanıcı" />
+    <NavigationProperty Name="Otel" Relationship="Self.FK__SonGörünt__OtelI__45F365D3" FromRole="SonGörüntülenen" ToRole="Otel" />
+    <NavigationProperty Name="Otel1" Relationship="Self.otel_songörüntülenen" FromRole="SonGörüntülenen" ToRole="Otel" />
+  </EntityType>
+  <Association Name="FK__Bildirim__Kullan__2B3F6F97">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1" />
+    <End Role="Bildirim" Type="Self.Bildirim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bildirim">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FavoriOte__Kulla__2C3393D0">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1" />
+    <End Role="FavoriOtel" Type="Self.FavoriOtel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FavoriOtel">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FavoriOte__OtelI__2D27B809">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="FavoriOtel" Type="Self.FavoriOtel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FavoriOtel">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kullanıcı_favoriotel">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FavoriOtel" Type="Self.FavoriOtel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FavoriOtel">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="otel_favoriotel">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FavoriOtel" Type="Self.FavoriOtel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FavoriOtel">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OtelPuanl__Kulla__38996AB5">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1" />
+    <End Role="OtelPuanlandırma" Type="Self.OtelPuanlandırma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelPuanlandırma">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rezervasy__Kulla__412EB0B6">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SonGörünt__Kulla__44FF419A">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1" />
+    <End Role="SonGörüntülenen" Type="Self.SonGörüntülenen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SonGörüntülenen">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kullanıcı_OdaYorum">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OdaYorum" Type="Self.OdaYorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OdaYorum">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kullanıcı_OtelPuanlandırma">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OtelPuanlandırma" Type="Self.OtelPuanlandırma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelPuanlandırma">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kullanıcı_OtelYorum">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OtelYorum" Type="Self.OtelYorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelYorum">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kullanıcı_rezervasyon">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kullanıcı_songörüntülenen">
+    <End Role="Kullanıcı" Type="Self.Kullanıcı" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SonGörüntülenen" Type="Self.SonGörüntülenen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanıcı">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SonGörüntülenen">
+        <PropertyRef Name="KullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Oda__OtelID__300424B4">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="Oda" Type="Self.Oda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Oda">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OdaFoto__OdaID__31EC6D26">
+    <End Role="Oda" Type="Self.Oda" Multiplicity="0..1" />
+    <End Role="OdaFoto" Type="Self.OdaFoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OdaFoto">
+        <PropertyRef Name="OdaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OdaYorum__OdaID__33D4B598">
+    <End Role="Oda" Type="Self.Oda" Multiplicity="1" />
+    <End Role="OdaYorum" Type="Self.OdaYorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OdaYorum">
+        <PropertyRef Name="OdaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rezervasy__OdaID__4222D4EF">
+    <End Role="Oda" Type="Self.Oda" Multiplicity="1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="OdaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Oda_OdaFoto">
+    <End Role="Oda" Type="Self.Oda" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OdaFoto" Type="Self.OdaFoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OdaFoto">
+        <PropertyRef Name="OdaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Oda_OdaYorum">
+    <End Role="Oda" Type="Self.Oda" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OdaYorum" Type="Self.OdaYorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OdaYorum">
+        <PropertyRef Name="OdaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Oda_Otel">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Oda" Type="Self.Oda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Oda">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Oda_rezervasyon">
+    <End Role="Oda" Type="Self.Oda" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oda">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="OdaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OtelFoto__OtelID__36B12243">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="OtelFoto" Type="Self.OtelFoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelFoto">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OtelPuanl__OtelI__398D8EEE">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="OtelPuanlandırma" Type="Self.OtelPuanlandırma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelPuanlandırma">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OtelYorum__OtelI__3C69FB99">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="OtelYorum" Type="Self.OtelYorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelYorum">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OtelYönet__OtelI__3F466844">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="OtelYöneticisi" Type="Self.OtelYöneticisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelYöneticisi">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SonGörünt__OtelI__45F365D3">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1" />
+    <End Role="SonGörüntülenen" Type="Self.SonGörüntülenen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SonGörüntülenen">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Otel_OtelFoto">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OtelFoto" Type="Self.OtelFoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelFoto">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="otel_OtelPuanlandırma">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OtelPuanlandırma" Type="Self.OtelPuanlandırma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelPuanlandırma">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="otel_OtelYorum">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OtelYorum" Type="Self.OtelYorum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelYorum">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Otel_OtelYöneticisi">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OtelYöneticisi" Type="Self.OtelYöneticisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OtelYöneticisi">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="otel_songörüntülenen">
+    <End Role="Otel" Type="Self.Otel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SonGörüntülenen" Type="Self.SonGörüntülenen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Otel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SonGörüntülenen">
+        <PropertyRef Name="OtelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OtelModel1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Bildirim" EntityType="Self.Bildirim" />
+    <EntitySet Name="FavoriOtel" EntityType="Self.FavoriOtel" />
+    <EntitySet Name="Kullanıcı" EntityType="Self.Kullanıcı" />
+    <EntitySet Name="Oda" EntityType="Self.Oda" />
+    <EntitySet Name="OdaFoto" EntityType="Self.OdaFoto" />
+    <EntitySet Name="OdaYorum" EntityType="Self.OdaYorum" />
+    <EntitySet Name="Otel" EntityType="Self.Otel" />
+    <EntitySet Name="OtelFoto" EntityType="Self.OtelFoto" />
+    <EntitySet Name="OtelPuanlandırma" EntityType="Self.OtelPuanlandırma" />
+    <EntitySet Name="OtelYorum" EntityType="Self.OtelYorum" />
+    <EntitySet Name="OtelYöneticisi" EntityType="Self.OtelYöneticisi" />
+    <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" />
+    <EntitySet Name="SonGörüntülenen" EntityType="Self.SonGörüntülenen" />
+    <AssociationSet Name="FK__Bildirim__Kullan__2B3F6F97" Association="Self.FK__Bildirim__Kullan__2B3F6F97">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="Bildirim" EntitySet="Bildirim" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FavoriOte__Kulla__2C3393D0" Association="Self.FK__FavoriOte__Kulla__2C3393D0">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="FavoriOtel" EntitySet="FavoriOtel" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FavoriOte__OtelI__2D27B809" Association="Self.FK__FavoriOte__OtelI__2D27B809">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="FavoriOtel" EntitySet="FavoriOtel" />
+    </AssociationSet>
+    <AssociationSet Name="kullanıcı_favoriotel" Association="Self.kullanıcı_favoriotel">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="FavoriOtel" EntitySet="FavoriOtel" />
+    </AssociationSet>
+    <AssociationSet Name="otel_favoriotel" Association="Self.otel_favoriotel">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="FavoriOtel" EntitySet="FavoriOtel" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OtelPuanl__Kulla__38996AB5" Association="Self.FK__OtelPuanl__Kulla__38996AB5">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="OtelPuanlandırma" EntitySet="OtelPuanlandırma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rezervasy__Kulla__412EB0B6" Association="Self.FK__Rezervasy__Kulla__412EB0B6">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SonGörünt__Kulla__44FF419A" Association="Self.FK__SonGörünt__Kulla__44FF419A">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="SonGörüntülenen" EntitySet="SonGörüntülenen" />
+    </AssociationSet>
+    <AssociationSet Name="kullanıcı_OdaYorum" Association="Self.kullanıcı_OdaYorum">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="OdaYorum" EntitySet="OdaYorum" />
+    </AssociationSet>
+    <AssociationSet Name="kullanıcı_OtelPuanlandırma" Association="Self.kullanıcı_OtelPuanlandırma">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="OtelPuanlandırma" EntitySet="OtelPuanlandırma" />
+    </AssociationSet>
+    <AssociationSet Name="kullanıcı_OtelYorum" Association="Self.kullanıcı_OtelYorum">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="OtelYorum" EntitySet="OtelYorum" />
+    </AssociationSet>
+    <AssociationSet Name="kullanıcı_rezervasyon" Association="Self.kullanıcı_rezervasyon">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="kullanıcı_songörüntülenen" Association="Self.kullanıcı_songörüntülenen">
+      <End Role="Kullanıcı" EntitySet="Kullanıcı" />
+      <End Role="SonGörüntülenen" EntitySet="SonGörüntülenen" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Oda__OtelID__300424B4" Association="Self.FK__Oda__OtelID__300424B4">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="Oda" EntitySet="Oda" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OdaFoto__OdaID__31EC6D26" Association="Self.FK__OdaFoto__OdaID__31EC6D26">
+      <End Role="Oda" EntitySet="Oda" />
+      <End Role="OdaFoto" EntitySet="OdaFoto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OdaYorum__OdaID__33D4B598" Association="Self.FK__OdaYorum__OdaID__33D4B598">
+      <End Role="Oda" EntitySet="Oda" />
+      <End Role="OdaYorum" EntitySet="OdaYorum" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rezervasy__OdaID__4222D4EF" Association="Self.FK__Rezervasy__OdaID__4222D4EF">
+      <End Role="Oda" EntitySet="Oda" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="Oda_OdaFoto" Association="Self.Oda_OdaFoto">
+      <End Role="Oda" EntitySet="Oda" />
+      <End Role="OdaFoto" EntitySet="OdaFoto" />
+    </AssociationSet>
+    <AssociationSet Name="Oda_OdaYorum" Association="Self.Oda_OdaYorum">
+      <End Role="Oda" EntitySet="Oda" />
+      <End Role="OdaYorum" EntitySet="OdaYorum" />
+    </AssociationSet>
+    <AssociationSet Name="Oda_Otel" Association="Self.Oda_Otel">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="Oda" EntitySet="Oda" />
+    </AssociationSet>
+    <AssociationSet Name="Oda_rezervasyon" Association="Self.Oda_rezervasyon">
+      <End Role="Oda" EntitySet="Oda" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OtelFoto__OtelID__36B12243" Association="Self.FK__OtelFoto__OtelID__36B12243">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelFoto" EntitySet="OtelFoto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OtelPuanl__OtelI__398D8EEE" Association="Self.FK__OtelPuanl__OtelI__398D8EEE">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelPuanlandırma" EntitySet="OtelPuanlandırma" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OtelYorum__OtelI__3C69FB99" Association="Self.FK__OtelYorum__OtelI__3C69FB99">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelYorum" EntitySet="OtelYorum" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OtelYönet__OtelI__3F466844" Association="Self.FK__OtelYönet__OtelI__3F466844">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelYöneticisi" EntitySet="OtelYöneticisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SonGörünt__OtelI__45F365D3" Association="Self.FK__SonGörünt__OtelI__45F365D3">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="SonGörüntülenen" EntitySet="SonGörüntülenen" />
+    </AssociationSet>
+    <AssociationSet Name="Otel_OtelFoto" Association="Self.Otel_OtelFoto">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelFoto" EntitySet="OtelFoto" />
+    </AssociationSet>
+    <AssociationSet Name="otel_OtelPuanlandırma" Association="Self.otel_OtelPuanlandırma">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelPuanlandırma" EntitySet="OtelPuanlandırma" />
+    </AssociationSet>
+    <AssociationSet Name="otel_OtelYorum" Association="Self.otel_OtelYorum">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelYorum" EntitySet="OtelYorum" />
+    </AssociationSet>
+    <AssociationSet Name="Otel_OtelYöneticisi" Association="Self.Otel_OtelYöneticisi">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="OtelYöneticisi" EntitySet="OtelYöneticisi" />
+    </AssociationSet>
+    <AssociationSet Name="otel_songörüntülenen" Association="Self.otel_songörüntülenen">
+      <End Role="Otel" EntitySet="Otel" />
+      <End Role="SonGörüntülenen" EntitySet="SonGörüntülenen" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

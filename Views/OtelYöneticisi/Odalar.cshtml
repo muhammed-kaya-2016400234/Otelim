@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Rooms";
+    Otel o = ViewBag.otel;
+}
+@using Mvc_Otelim.Models;
+@model List<Oda>
+
+    <div class="col-md-9">
+        <div class="block">
+            <div class="block-heading" style="font-size:x-large">
+
+               
+
+                   Rooms 
+                 
+
+                <div class="block-controls">
+
+                    <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+
+                </div>
+
+
+
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Oda ID</th>
+                                <th>Oda Adı</th>
+                                <th>Güncelle</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{foreach (Oda k in Model)
+                                {
+
+
+                                    <tr>
+                                        <td><a href="@Url.Action("Görüntüle","Oda",new {OdaID=k.ID,giriş=ViewBag.girisTarih,çıkış=ViewBag.cıkısTarih })" type="button" class="btn btn-default">@k.ID</a></td>
+                                        <td>@k.name</td>
+                                        <td><a class="btn btn-info bg-color-yellow" href="@Url.Action("OdaGüncelleForm","OtelYöneticisi",new {id=k.ID })">Güncelle</a></td>
+                                        <td><button class="btn btn-danger odasil" data-odaid="@k.ID" data-oname="@k.name">Sil</button></td>
+
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="block">
+            <div class="block-heading" style="font-size:larger">
+
+                    Add New Room
+                    
+
+                <div class="block-controls">
+
+                    <span aria-hidden="true" class="icon icon-arrow-down icon-size-medium block-control-collapse"></span>
+
+                </div>
+
+
+
+            </div>
+            <div class="block-content-outer">
+                <div class="block-content-inner">
+
+                    <form role="form" class="login-form form-horizontal bv-form" method="post" action="OdaEkle" novalidate="novalidate">
+                        <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                        <div class="form-group has-feedback">
+                            <label for="inputName" class="col-sm-3 control-label">Room Name</label>
+                            <div class="col-sm-9">
+                                <input autocomplete="on" class="form-control" id="inputName" placeholder="Room Name" type="text" name="name" data-bv-field="name"><i class="form-control-feedback" data-bv-icon-for="name" style="display: none;"></i>
+
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="name" data-bv-result="NOT_VALIDATED" style="display: none;">The room name is required and cannot be empty</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label for="inputRoomType" class="col-sm-3 control-label">Room Type</label>
+                            <div class="col-sm-9">
+                                <input autocomplete="on" class="form-control" id="inputRoomType" placeholder="Room Type" type="text" name="OdaTürü" data-bv-field="password"><i class="form-control-feedback" data-bv-icon-for="rtype" style="display: none;"></i>
+
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label for="inputCap" class="col-sm-3 control-label">Capacity</label>
+                            <div class="col-sm-9">
+                                <input autocomplete="on" class="form-control" id="inputCap" placeholder="Capacity" type="text" name="Kapasite" data-bv-field="password"><i class="form-control-feedback" data-bv-icon-for="cap" style="display: none;"></i>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success">Submit</button>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+             </div>
+        </div>
+    </div>          
+        
+
+
+        @section scripts{
+                        <script>
+                            $(".odasil").click(function () {
+
+                                var rID = $(this).data("odaid");
+                                var name = $(this).data("oname");
+
+                                var check = confirm(rID + " no'lu oda(" + name + ") silinsin mi?")
+
+                                if (check == true) {
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/OtelYöneticisi/OdaSil/",
+                                        data: { id: rID },
+                                        success: function () {
+                                            alert("Oda Silindi!");
+                                            window.location.replace("/OtelYöneticisi/Odalar/");
+                                        }
+
+                                    });
+                                }
+                            });
+
+
+                        </script>
+
+                    }
